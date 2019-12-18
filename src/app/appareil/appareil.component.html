@@ -8,16 +8,17 @@
   <h4 [ngStyle]="{ color: getColor() }">
     Appareil : {{ appareilName }} -- Statut : {{ getStatus() }}
   </h4>
+  <a [routerLink]="[id]">Détail</a>
   <input type="text" class="form-control" [(ngModel)]="appareilName" />
   <button
-    class="btn btn-sm btn-success"
+    class="btn btn-success my-sm-0"
     *ngIf="appareilStatus === 'éteint'"
     (click)="onSwitch()"
   >
     Allumer
   </button>
   <button
-    class="btn btn-sm btn-danger"
+    class="btn btn-danger my-sm-0"
     *ngIf="appareilStatus === 'allumé'"
     (click)="onSwitch()"
   >
